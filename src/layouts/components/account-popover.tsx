@@ -32,7 +32,7 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
   const router = useRouter();
   const handleLogout = async () => {
     console.log('Logging out...');
-    await axios.post('http://localhost:5000/api/account/sign-out', {"email":"admin@123.com"})
+    await axios.post('https://project-react-backend-lemon.vercel.app/api/account/sign-out', {"email":"admin@123.com"})
     .then((res) => {
       console.log(res.data);
       router.push('/sign-in');
