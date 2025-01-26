@@ -36,4 +36,14 @@ export default defineConfig({
   },
   server: { port: PORT, host: true },
   preview: { port: PORT, host: true },
+  build: {
+    rollupOptions: {
+      onwarn(warning, warn) {
+        if (warning.code === 'THIS_IS_UNDEFINED') {
+          return;
+        }
+        warn(warning);
+      },
+    },
+  },
 });

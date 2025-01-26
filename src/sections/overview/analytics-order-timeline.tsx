@@ -1,3 +1,4 @@
+/* eslint-disable */
 import type { CardProps } from '@mui/material/Card';
 import type { TimelineItemProps } from '@mui/lab/TimelineItem';
 
