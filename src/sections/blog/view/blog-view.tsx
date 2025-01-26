@@ -41,7 +41,7 @@ export function BlogView() {
       </Box>
 
       <Box display="flex" alignItems="center" justifyContent="space-between" sx={{ mb: 5 }}>
-        <PostSearch posts={_posts} />
+        <PostSearch posts={_posts.map(post => ({ ...post, postedAt: post.postedAt.toString() }))} />
         <PostSort
           sortBy={sortBy}
           onSort={handleSort}
@@ -60,7 +60,7 @@ export function BlogView() {
 
           return (
             <Grid key={post.id} xs={12} sm={latestPostLarge ? 12 : 6} md={latestPostLarge ? 6 : 3}>
-              <PostItem post={post} latestPost={latestPost} latestPostLarge={latestPostLarge} />
+              <PostItem post={{ ...post, postedAt: post.postedAt.toString() }} latestPost={latestPost} latestPostLarge={latestPostLarge} />
             </Grid>
           );
         })}

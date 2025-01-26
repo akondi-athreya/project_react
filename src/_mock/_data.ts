@@ -35,12 +35,31 @@ export const _users = [...Array(4)].map((_, index) => ({
 // ----------------------------------------------------------------------
 
 export const _posts = [...Array(23)].map((_, index) => ({
-  id: _stuid(index),
-  coverUrl: `/assets/images/cover/cover-${index + 1}.webp`,
-  totalViews: 8829,
-  totalComments: 7977,
-  totalShares: 8556,
-  totalFavorites: 8870,
+  id: '1',
+
+    coverUrl: 'https://source.unsplash.com/random',
+
+    totalViews: 100,
+
+    totalComments: 20,
+
+    totalShares: 10,
+
+    totalFavorites: 5,
+
+    title: 'Sample Post Title',
+
+    description: 'Sample Post Description',
+
+    postedAt: new Date(),
+
+    author: {
+
+      name: 'Author Name',
+
+      avatarUrl: 'https://source.unsplash.com/random',
+
+    },
 }));
 
 // ----------------------------------------------------------------------
@@ -61,6 +80,9 @@ export const _products = [...Array(24)].map((_, index) => {
 
   return {
     id: _id(index),
+    name: 'a',
+    price: 1,
+    priceSale: "1",
     coverUrl: `/assets/images/product/product-${setIndex}.webp`,
     colors:
       (setIndex === 1 && COLORS.slice(0, 2)) ||
@@ -107,12 +129,14 @@ export const _timeline = [...Array(5)].map((_, index) => ({
     'New order placed #XF-2346',
   ][index],
   type: `order${index + 1}`,
+  time: '2023-01-01' ,
 }));
 
 // ----------------------------------------------------------------------
 
 export const _tasks = [...Array(5)].map((_, index) => ({
   id: _id(index),
+  name: "A"
 }));
 
 // ----------------------------------------------------------------------

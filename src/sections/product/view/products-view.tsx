@@ -134,7 +134,7 @@ export function ProductsView() {
       <Grid container spacing={3}>
         {_products.map((product) => (
           <Grid key={product.id} xs={12} sm={6} md={3}>
-            <ProductItem product={product} />
+            <ProductItem product={{ ...product, priceSale: Number(product.priceSale) }} />
           </Grid>
         ))}
       </Grid>

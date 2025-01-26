@@ -137,7 +137,13 @@ export function OverviewAnalyticsView() {
         </Grid>
 
         <Grid xs={12} md={6} lg={8}>
-          <AnalyticsNews title="News" list={_posts.slice(0, 5)} />
+          <AnalyticsNews
+            title="News"
+            list={_posts.slice(0, 5).map(post => ({
+              ...post,
+              postedAt: post.postedAt.getTime(), // Convert Date to timestamp
+            }))}
+          />
         </Grid>
 
         <Grid xs={12} md={6} lg={4}>
